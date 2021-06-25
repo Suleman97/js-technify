@@ -41,41 +41,82 @@ jhon_BMI = jhon_weight / (jhon_height * jhon_height);
 //   console.log('match is draw');
 // }
 
-function tipCalculator(bill) {
-  if (bill < 50) {
-    const tip = (bill * (20 / 100)).toFixed(2);
-    console.log('the tip of $' + bill + ' is ' + tip);
-    return tip;
+// function tipCalculator(bill) {
+//   if (bill < 50) {
+//     const tip = (bill * (20 / 100)).toFixed(2);
+//     console.log('the tip of $' + bill + ' is ' + tip);
+//     return tip;
 
-  } else if (bill >= 50 || bill < 200) {
-    const tip = (bill * (15 / 100)).toFixed(2);
-    console.log('the tip of $' + bill + ' is ' + tip)
-    return tip;
-  } else {
-    const tip = (bill * (10 / 100)).toFixed(2);
-    console.log('the tip of $' + bill + ' is ' + tip);
-    return tip;
-  }
+//   } else if (bill >= 50 || bill < 200) {
+//     const tip = (bill * (15 / 100)).toFixed(2);
+//     console.log('the tip of $' + bill + ' is ' + tip)
+//     return tip;
+//   } else {
+//     const tip = (bill * (10 / 100)).toFixed(2);
+//     console.log('the tip of $' + bill + ' is ' + tip);
+//     return tip;
+//   }
+// }
+
+// const totalTip = [];
+// // tipCalculator(48)\
+// // totalTip[0] = tipCalculator(48)
+
+// totalTip.push(tipCalculator(48));
+// totalTip.push(tipCalculator(124));
+// totalTip.push(tipCalculator(268));
+// // console.log(totalTip)
+
+// numbers = totalTip.map(Number);
+// console.log(numbers);
+
+// // console.log(numbers[0])
+// bill1 = numbers[0] + 48;
+// bill2 = numbers[1] + 124;
+// bill3 = numbers[2] + 268;
+// // console.log(bill1)
+
+// const totalBill = [];
+// totalBill.push(bill1, bill2, bill3);
+// console.log(totalBill);
+
+const Jhon = {
+  firstName: 'John Stefan',
+  height: 1.75,
+  mass: 99,
+  calcBmi: function () {
+    this.BMI = (this.mass / (this.height * this.height)).toFixed(2);
+  },
+};
+
+const Mark = {
+  firstName: 'Mark Albert',
+  height: 1.75,
+  mass: 99,
+  calcBmi: function () {
+    this.BMI = (this.mass / (this.height * this.height)).toFixed(2);
+  },
+};
+
+Jhon.calcBmi();
+console.log(Jhon);
+
+Mark.calcBmi();
+console.log(Mark);
+
+if (Jhon.BMI > Mark.BMI) {
+  console.log(Jhon.firstName + ' has the greater BMI which is ' + Jhon.BMI);
+} else if (Jhon.BMI < Mark.BMI) {
+  console.log(Mark.firstName + ' has the greater BMI which is ' + Mark.BMI);
+} else {
+  console.log(
+    Jhon.firstName +
+    ' and ' +
+    Mark.firstName +
+    ' has the same BMIS which are ' +
+    Jhon.BMI +
+    ' and ' +
+    Mark.BMI +
+    ' respectively'
+  );
 }
-
-const totalTip = [];
-// tipCalculator(48)\
-// totalTip[0] = tipCalculator(48)
-
-totalTip.push(tipCalculator(48));
-totalTip.push(tipCalculator(124));
-totalTip.push(tipCalculator(268));
-// console.log(totalTip)
-
-numbers = totalTip.map(Number);
-console.log(numbers);
-
-// console.log(numbers[0])
-bill1 = numbers[0] + 48;
-bill2 = numbers[1] + 124;
-bill3 = numbers[2] + 268;
-// console.log(bill1)
-
-const totalBill = [];
-totalBill.push(bill1, bill2, bill3);
-console.log(totalBill);
