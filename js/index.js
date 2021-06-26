@@ -121,10 +121,42 @@ jhon_BMI = jhon_weight / (jhon_height * jhon_height);
 //   );
 // }
 
-const jhon = ['a', 'b', 'c', 20, 'd', 'e', 'f', 'g']
+// const jhon = ['a', 'b', 'c', 20, 'd', 'e', 'f', 'g']
 
-for (let i = jhon.length - 1; i >= 0; i--) {
-  if (typeof jhon[i] !== 'string') continue;
-  console.log(jhon[i]);
-}
-console.log('heelo')
+// for (let i = jhon.length - 1; i >= 0; i--) {
+//   if (typeof jhon[i] !== 'string') continue;
+//   console.log(jhon[i]);
+// }
+// console.log('heelo')
+
+const jhonObj = {
+  bills: [124, 268, 180, 42, 48],
+  calcTip: function () {
+    this.totalTip = [];
+    this.finalValue = [];
+    for (let i = 0; i < this.bills.length; i++) {
+      let percentage;
+      let bill = this.bills[i];
+      if (bill < 50) {
+        percentage = .2
+      } else if (bill >= 50 && bill < 200) {
+        percentage = .15
+      } else {
+        percentage = .1
+      }
+      this.totalTip[i] = (bill * percentage).toFixed(2);
+      this.finalValue[i] = bill + bill * percentage;
+
+      console.log(this.totalTip)
+
+    }
+    // this.finalValue = this.tips + this.bill
+    // con sole.log(this.finalValue)
+    // return tips;
+  },
+};
+
+// jhonObj();
+jhonObj.calcTip()
+// console.log(jhonObj.calcTip)
+console.log(jhonObj)
