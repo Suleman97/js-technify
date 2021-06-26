@@ -80,43 +80,51 @@ jhon_BMI = jhon_weight / (jhon_height * jhon_height);
 // totalBill.push(bill1, bill2, bill3);
 // console.log(totalBill);
 
-const Jhon = {
-  firstName: 'John Stefan',
-  height: 1.75,
-  mass: 99,
-  calcBmi: function () {
-    this.BMI = (this.mass / (this.height * this.height)).toFixed(2);
-  },
-};
+// const Jhon = {
+//   firstName: 'John Stefan',
+//   height: 1.75,
+//   mass: 99,
+//   calcBmi: function () {
+//     this.BMI = (this.mass / (this.height * this.height)).toFixed(2);
+//   },
+// };
 
-const Mark = {
-  firstName: 'Mark Albert',
-  height: 1.75,
-  mass: 99,
-  calcBmi: function () {
-    this.BMI = (this.mass / (this.height * this.height)).toFixed(2);
-  },
-};
+// const Mark = {
+//   firstName: 'Mark Albert',
+//   height: 1.75,
+//   mass: 99,
+//   calcBmi: function () {
+//     this.BMI = (this.mass / (this.height * this.height)).toFixed(2);
+//   },
+// };
 
-Jhon.calcBmi();
-console.log(Jhon);
+// Jhon.calcBmi();
+// console.log(Jhon);
 
-Mark.calcBmi();
-console.log(Mark);
+// Mark.calcBmi();
+// console.log(Mark);
 
-if (Jhon.BMI > Mark.BMI) {
-  console.log(Jhon.firstName + ' has the greater BMI which is ' + Jhon.BMI);
-} else if (Jhon.BMI < Mark.BMI) {
-  console.log(Mark.firstName + ' has the greater BMI which is ' + Mark.BMI);
-} else {
-  console.log(
-    Jhon.firstName +
-    ' and ' +
-    Mark.firstName +
-    ' has the same BMIS which are ' +
-    Jhon.BMI +
-    ' and ' +
-    Mark.BMI +
-    ' respectively'
-  );
+// if (Jhon.BMI > Mark.BMI) {
+//   console.log(Jhon.firstName + ' has the greater BMI which is ' + Jhon.BMI);
+// } else if (Jhon.BMI < Mark.BMI) {
+//   console.log(Mark.firstName + ' has the greater BMI which is ' + Mark.BMI);
+// } else {
+//   console.log(
+//     Jhon.firstName +
+//     ' and ' +
+//     Mark.firstName +
+//     ' has the same BMIS which are ' +
+//     Jhon.BMI +
+//     ' and ' +
+//     Mark.BMI +
+//     ' respectively'
+//   );
+// }
+
+const jhon = ['a', 'b', 'c', 20, 'd', 'e', 'f', 'g']
+
+for (let i = jhon.length - 1; i >= 0; i--) {
+  if (typeof jhon[i] !== 'string') continue;
+  console.log(jhon[i]);
 }
+console.log('heelo')
